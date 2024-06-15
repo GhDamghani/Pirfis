@@ -23,6 +23,7 @@ end
 function mirror_and_check(x::Array{Int64, 1}, y::Array{Int64, 1}, N::Int64)
     (x == y) || (((N+1) .- x) == y) || (reverse(x) == y) || ((N+1) .- reverse(x) == y)
 end
+
 function rot90(x::Array{Int64, 1}, N::Int64)
     y = fill(0, N)
     for (i, x) in enumerate(x)
@@ -30,6 +31,7 @@ function rot90(x::Array{Int64, 1}, N::Int64)
     end
     return y
 end
+
 function is_fundamental(new_ans::Array{Int64, 1}, answers::Array{Array{Int64, 1}, 1}, N::Int64)
     if length(answers) == 0
         return true
@@ -45,7 +47,6 @@ function is_fundamental(new_ans::Array{Int64, 1}, answers::Array{Array{Int64, 1}
     end
     return true
 end
-
 
 function solve_nqueen(N::Int64)
     queen_positions = fill(1, N)
@@ -107,4 +108,3 @@ function main()
 end
 
 main()
-
