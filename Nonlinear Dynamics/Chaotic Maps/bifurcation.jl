@@ -1,3 +1,4 @@
+# import Pkg; Pkg.add("Revise")
 using Revise
 includet("maps.jl")
 using Plots
