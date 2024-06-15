@@ -1,2 +1,2 @@
-# Scripts Worth Sharing
- Scripts Worth Sharing
+# Pirfis
+Pirfis Is a Repository For Interesting Scripts
