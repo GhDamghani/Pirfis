@@ -20,6 +20,8 @@ d_s(A, B) = ((A .- B) .^ 2) |> sum |> sqrt
 d_c(A, B) = ((A .- B) .^ 2) |> sum |> sqrt
 D(A_xy, B_xy, A_pixel, B_pixel, S, m=1) = sqrt(d_c(A_pixel, B_pixel)^2 + (m * d_s(A_xy, B_xy) / S)^2)
 
+"""R. Achanta, A. Shaji, K. Smith, A. Lucchi, P. Fua and S. Süsstrunk, "SLIC Superpixels Compared to State-of-the-Art Superpixel Methods," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 34, no. 11, pp. 2274-2282, Nov. 2012, doi: 10.1109/TPAMI.2012.120.
+keywords: {Clustering algorithms;Image segmentation;Complexity theory;Image color analysis;Image edge detection;Measurement uncertainty;Approximation algorithms;Superpixels;segmentation;clustering;k-means}"""
 function SLIC(img, n_sp, compactness=1)
     # initializing
     height, width = size(img)
